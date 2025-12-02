@@ -55,6 +55,7 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
 function startProgress() {
       const progressBar = document.getElementById('skills__bar skills__html');
       let width = 0;
@@ -71,3 +72,36 @@ function startProgress() {
         }
       }, 10); // Increase speed by reducing interval time
     }
+function sendEmail() {
+
+const templateParams = {
+
+name: document.querySelector("#Name").value,
+
+email: document.querySelector("#Email").value,
+
+subject: document.querySelector("#subject").value,
+
+message: document.querySelector("#Message").value,
+
+};
+
+emailjs
+
+.send("service_r19cjer", "template_r1da2jj", templateParams)
+
+.then(() => {
+
+alert("Email sent successfully!");
+
+})
+
+.catch((error) => {
+
+console.log("Error sending email:", error);
+
+alert("Failed to send email. Please try again.");
+
+});
+
+}
