@@ -11,13 +11,6 @@
         <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "3lODucly1hPFuvpht",
-      });
-   })();
-</script>
         <title>Portfolio website complete</title>
     </head>
     <body>
@@ -184,10 +177,10 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
+                    <form method="POST" action="https://formsubmit.co/ethenox19@email.com" class="contact__form">
                         <input type="text" id="Name" placeholder="Name" class="contact__input">
                         <input type="mail" id="Email" placeholder="Email" class="contact__input">
-                        <textarea name="" id="Message" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="text" name="" id="Message" cols="0" rows="10" class="contact__input">
                         <button type="submit" placeholder="Contact" onclick="sendMail()" > send </button>
                         
                     </form>
@@ -214,6 +207,7 @@
         <script src="main.js"></script>
     </body>
 </html>
+
 
 
 
