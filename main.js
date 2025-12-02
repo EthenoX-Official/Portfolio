@@ -72,35 +72,3 @@ function startProgress() {
         }
       }, 10); // Increase speed by reducing interval time
     }
-function sendMail() {
-
-let Params = {
-
-Name: document.getElementById("#Name").value,
-
-Email: document.getElementById("#Email").value,
-
-Message: document.getElementById("#Message").value,
-
-};
-
-emailjs
-    .send("service_r19cjer", "template_r1da2jj", Params)
-
-.then(() => {
-
-alert("Email sent successfully!");
-
-})
-
-.catch((error) => {
-
-console.log("Error sending email:", error);
-
-alert("Failed to send email. Please try again.");
-
-});
-
-}
-
-
