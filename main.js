@@ -76,19 +76,16 @@ function sendEmail() {
 
 const templateParams = {
 
-name: document.querySelector("#Name").value,
+Name: document.querySelector("#Name").value,
 
-email: document.querySelector("#Email").value,
+Email: document.querySelector("#Email").value,
 
-subject: document.querySelector("#subject").value,
-
-message: document.querySelector("#Message").value,
+Message: document.querySelector("#Message").value,
 
 };
 
 emailjs
-
-.send("service_r19cjer", "template_r1da2jj", templateParams)
+    .send("service_r19cjer", "template_r1da2jj", templateParams)
 
 .then(() => {
 
@@ -105,3 +102,4 @@ alert("Failed to send email. Please try again.");
 });
 
 }
+
