@@ -14,7 +14,7 @@ message: document.querySelector("#message").value,
 
 emailjs
 
-.send("service_aujbxln", "template_mg97won", templateParams)
+.send("service_r19cjer", "template_r1da2jj", templateParams)
 
 .then(() => {
 
