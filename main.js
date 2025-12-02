@@ -72,20 +72,20 @@ function startProgress() {
         }
       }, 10); // Increase speed by reducing interval time
     }
-function sendEmail() {
+function sendMail() {
 
-const templateParams = {
+let Params = {
 
-Name: document.querySelector("#Name").value,
+Name: document.getElementById("#Name").value,
 
-Email: document.querySelector("#Email").value,
+Email: document.getElementById("#Email").value,
 
-Message: document.querySelector("#Message").value,
+Message: document.getElementById("#Message").value,
 
 };
 
 emailjs
-    .send("service_r19cjer", "template_r1da2jj", templateParams)
+    .send("service_r19cjer", "template_r1da2jj", Params)
 
 .then(() => {
 
@@ -102,4 +102,5 @@ alert("Failed to send email. Please try again.");
 });
 
 }
+
 
